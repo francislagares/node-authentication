@@ -1,0 +1,16 @@
+version: "3.9"
+
+networks:
+  mongodb:
+
+services:
+  mongo-db:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    restart: unless-stopped
+    volumes:
+      - ./mongodb:/data/db
+    networks:
+      - mongodb
