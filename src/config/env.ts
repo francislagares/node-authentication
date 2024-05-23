@@ -4,7 +4,7 @@ const envSchema = z.object({
   PORT: z.coerce
     .number({
       description:
-        '.env files convert numbers to strings, therefoore we have to enforce them to be numbers',
+        '.env files convert numbers to strings, therefore we have to enforce them to be numbers',
     })
     .positive()
     .max(65536, `options.port should be >= 0 and < 65536`)
